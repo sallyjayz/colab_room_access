@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Colab\'s Room Access</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="incorrect_email_format">Incorrect email format.</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="first_name">First Name*</string>
+    <string name="last_name">Last Name*</string>
+    <string name="confirm_password">Confirm Password*</string>
+    <string name="register">Register</string>
+    <string name="login">Log In</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_instruction">Access your rooms, bookings\nand subscription anytime.</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password_instruction">Password must be at least 8 characters</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="registration_instruction">Start booking rooms and managing\nyour sessions in minutes</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_verification">Email Verification</string>
+    <string name="email_verification_instruction">Enter the 6 digits verification code sent
+        \nto your mail example@gmail.com</string>
+    <string name="confirm">Confirm</string>
+    <string name="resend_code">Didn\'t get the code? Resend Code</string>
+    <string name="proceed">Proceed</string>
+    <string name="try_again">Try Again</string>
+    <string name="forgot_password_instruction">A six digit verification code would\nbe sent to your email</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="new_password_instruction">Enter and confirm password</string>
+</resources>
