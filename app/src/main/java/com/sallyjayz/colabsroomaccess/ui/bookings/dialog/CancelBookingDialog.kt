@@ -1,5 +1,7 @@
-package com.sallyjayz.colabsroomaccess.ui.email_verification.dialog
+package com.sallyjayz.colabsroomaccess.ui.bookings.dialog
 
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
@@ -9,16 +11,17 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import com.sallyjayz.colabsroomaccess.R
 import com.sallyjayz.colabsroomaccess.ui.FilledButton
 
 /**
- * Created by Salama Jatau on 05-Feb-26.
+ * Created by Salama Jatau on 09-Mar-26.
  */
 
 @Composable
-fun NotVerifiedDialog(openAlertDialog: MutableState<Boolean>) {
+fun CancelBookingDialog(
+    openAlertDialog: MutableState<Boolean>
+) {
 
     if (openAlertDialog.value) {
         AlertDialog(
@@ -26,11 +29,11 @@ fun NotVerifiedDialog(openAlertDialog: MutableState<Boolean>) {
                 Icon(painterResource(R.drawable.password_instruction_logo), contentDescription = null)
             },
             title = {
-                Text(text = "Unable to verify mail")
+                Text(text = "Cancel Booking?")
             },
             text = {
                 Text(
-                    text = "We couldn't verify your email, Please try again",
+                    text = "Are you sure you want to cancel this\nbooking?",
                     textAlign = TextAlign.Center
                 )
             },
@@ -42,28 +45,28 @@ fun NotVerifiedDialog(openAlertDialog: MutableState<Boolean>) {
                     onClick = {
 //                        openAlertDialog.value = false
                     },
-                    buttonText = R.string.try_again,
+                    buttonText = R.string.no_keep_booking,
                     modifier = Modifier
                         .fillMaxWidth()
                 )
             },
-            /*dismissButton = {
-                TextButton(
+            dismissButton = {
+                FilledButton(
                     onClick = {
-                        onDismissRequest()
-                    }
-                ) {
-                    Text("Dismiss")
-                }
-            }*/
+//                        openAlertDialog.value = false
+                    },
+                    buttonText = R.string.yes_cancel_booking,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+            }
         )
     }
-
-
 }
 
-/*@Preview(showBackground = true)
+/*
+@Preview(showBackground = true)
 @Composable
-fun NotVerifiedDialogPreview() {
-    NotVerifiedDialog(onDismissRequest = { })
+fun CancelBookingDialogPreview() {
+    CancelBookingDialog()
 }*/

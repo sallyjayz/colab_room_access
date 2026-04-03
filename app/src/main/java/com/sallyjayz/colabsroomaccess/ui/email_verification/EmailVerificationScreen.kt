@@ -198,7 +198,9 @@ fun OtpScreen(
         // this text shows whether the OTP is invalid or valid
         state.isValid?.let { isValid ->
 
-            if (isValid) VerifyDialog() else NotVerifiedDialog()
+            openAlertDialog.value = true
+
+            if (isValid) VerifyDialog(openAlertDialog = openAlertDialog) else NotVerifiedDialog(openAlertDialog = openAlertDialog)
 
 
 

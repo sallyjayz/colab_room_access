@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.sallyjayz.colabsroomaccess.ui.TopBottomBar
 import com.sallyjayz.colabsroomaccess.ui.email_verification.EmailVerificationTwoScreen
+import com.sallyjayz.colabsroomaccess.ui.explore.ExploreRoomDetailsScreen
 import com.sallyjayz.colabsroomaccess.ui.theme.ColabsRoomAccessTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,30 +20,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ColabsRoomAccessTheme {
-                TopBottomBar(modifier = Modifier.fillMaxSize())
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
+                ExploreRoomDetailsScreen()
+//                TopBottomBar(modifier = Modifier.fillMaxSize())
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ColabsRoomAccessTheme {
-        Greeting("Android")
     }
 }

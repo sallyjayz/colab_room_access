@@ -5,6 +5,7 @@ import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -19,47 +20,52 @@ import com.sallyjayz.colabsroomaccess.ui.FilledButton
  */
 
 @Composable
-fun VerifyDialog() {
+fun VerifyDialog(openAlertDialog: MutableState<Boolean>) {
 
-    AlertDialog(
-        icon = {
-            Icon(painterResource(R.drawable.password_instruction_logo), contentDescription = null)
-        },
-        title = {
-            Text(text = "Verified")
-        },
-        text = {
-            Text(
-                text = "Your email has been successfully verified",
-                textAlign = TextAlign.Center
-            )
-        },
-        onDismissRequest = {
-
-        },
-        confirmButton = {
-            FilledButton(
-                onClick = {},
-                buttonText = R.string.proceed,
-                modifier = Modifier
-                    .fillMaxWidth()
-            )
-        },
-        /*dismissButton = {
-            TextButton(
-                onClick = {
-                    onDismissRequest()
+    if (openAlertDialog.value) {
+        AlertDialog(
+            icon = {
+                Icon(painterResource(R.drawable.password_instruction_logo), contentDescription = null)
+            },
+            title = {
+                Text(text = "Verified")
+            },
+            text = {
+                Text(
+                    text = "Your email has been successfully verified",
+                    textAlign = TextAlign.Center
+                )
+            },
+            onDismissRequest = {
+                openAlertDialog.value = false
+            },
+            confirmButton = {
+                FilledButton(
+                    onClick = {
+//                        openAlertDialog.value = false
+                    },
+                    buttonText = R.string.proceed,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+            },
+            /*dismissButton = {
+                TextButton(
+                    onClick = {
+                        onDismissRequest()
+                    }
+                ) {
+                    Text("Dismiss")
                 }
-            ) {
-                Text("Dismiss")
-            }
-        }*/
-    )
+            }*/
+        )
+    }
 
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun VerifyDialogPreview() {
     VerifyDialog()
-}
+}*/
